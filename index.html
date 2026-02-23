@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thangakaasu | Cyberpunk Cash for Gold</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Background Elements -->
+    <div class="background-grid"></div>
+    <div class="ambient-glow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" style="display: flex; align-items: center; gap: 10px; text-align: left;">
+                <img src="assets/logo.png" alt="Thangakaasu Logo"
+                    style="height: 40px; width: 40px; border-radius: 4px; object-fit: cover;">
+                <div>
+                    <span class="logo-text">தங்க<span class="gold-text">காசு</span></span><br>
+                    <span
+                        style="font-size: 0.5rem; letter-spacing: 2px; color: var(--gold-primary); display: block; margin-top: -5px;">தங்கத்திற்கு
+                        காசு</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="#how-it-works" class="nav-link">Process</a>
+                <a href="#calculator" class="nav-link">Valuation</a>
+                <a href="#security" class="nav-link">Security</a>
+            </div>
+            <button class="cta-button primary" data-modal-target="#lead-modal">Get Quote</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="badge">Next-Gen Asset Exchange</div>
+            <h1 class="hero-title">Turn Your Gold Into <br><span class="glitch-text" data-text="Liquid Capital">Liquid
+                    Capital</span></h1>
+            <p class="hero-subtitle">The most advanced, secure, and transparent cash for gold platform. Instant
+                valuation powered by real-time market data.</p>
+            <div class="hero-actions">
+                <button class="cta-button primary glow" data-modal-target="#lead-modal">Start Valuation</button>
+                <button class="cta-button secondary" href="#how-it-works">How It Works</button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-image-container">
+                <img src="assets/hero-gold.png" alt="Futuristic Gold" class="floating-gold" id="hero-img">
+                <div class="scanning-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Valuation Calculator -->
+    <section class="calculator-section" id="calculator">
+        <div class="container">
+            <div class="section-header">
+                <h2>Real-Time <span class="gold-text">Valuation</span></h2>
+                <p>Enter your assets for an instant market-rate estimate.</p>
+            </div>
+
+            <div class="calculator-card glass-panel">
+                <div class="calc-inputs">
+                    <div class="input-group">
+                        <label for="karat">Purity (Karat)</label>
+                        <select id="karat" class="cyber-select">
+                            <option value="24">24k (99.9%)</option>
+                            <option value="22">22k (91.6%)</option>
+                            <option value="18">18k (75.0%)</option>
+                            <option value="14">14k (58.3%)</option>
+                            <option value="10">10k (41.7%)</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="weight">Weight (Grams)</label>
+                        <input type="number" id="weight" class="cyber-input" placeholder="0.00" step="0.1" min="0">
+                    </div>
+                </div>
+
+                <div class="calc-inputs" style="grid-template-columns: 1fr; margin-bottom: 2rem; margin-top: -1rem;">
+                    <div class="input-group">
+                        <label for="currency">Payout Currency</label>
+                        <select id="currency" class="cyber-select">
+                            <option value="INR" selected>INR (₹)</option>
+                            <option value="USD">USD ($)</option>
+                            <option value="EUR">EUR (€)</option>
+                            <option value="GBP">GBP (£)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="calc-results">
+                    <div class="result-label">Estimated Value</div>
+                    <div class="result-value" id="estimated-value">$0.00</div>
+                    <div class="market-rate-note">Based on live base rate: <span
+                            class="live-rate glow-text animate-pulse">16,246.00/g</span> <br><small
+                            style="color:var(--gold-primary); opacity: 0.8;">(Live MCX Pricing)</small></div>
+                </div>
+
+                <button class="cta-button full-width primary" data-modal-target="#lead-modal">Lock In Price</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="process-section" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>The <span class="gold-text">Process</span></h2>
+                <p>Simple, secure, and fully insured from start to finish.</p>
+            </div>
+            <div class="process-steps">
+                <div class="step glass-panel">
+                    <div class="step-num">01</div>
+                    <h3>Request Free Kit</h3>
+                    <p>Order a complimentary, fully insured shipping kit delivered straight to your door.</p>
+                </div>
+                <div class="step glass-panel">
+                    <div class="step-num">02</div>
+                    <h3>Send Assets</h3>
+                    <p>Securely pack your gold. Shipping is prepaid, tracked, and insured for your peace of mind.</p>
+                </div>
+                <div class="step glass-panel">
+                    <div class="step-num">03</div>
+                    <h3>Get Paid Instantly</h3>
+                    <p>Receive your valuation within 24 hours. Accept the offer for immediate transfer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security & Trust -->
+    <section class="security-section" id="security">
+        <div class="container">
+            <div class="security-grid">
+                <div class="security-content">
+                    <h2>Bank-Grade <span class="gold-text">Security</span></h2>
+                    <p>Your assets are protected by enterprise-level security protocols at every step of the journey.
+                    </p>
+                    <ul class="security-list">
+                        <li><span>✓</span> 100% Insured Shipping up to $100,000</li>
+                        <li><span>✓</span> 24/7 Facility Vault Storage</li>
+                        <li><span>✓</span> HD Video Unboxing Process</li>
+                        <li><span>✓</span> A+ Better Business Bureau Rating</li>
+                    </ul>
+                </div>
+                <div class="security-visual">
+                    <div class="shield-container glass-panel">
+                        <div class="shield-icon glow-text">🛡️</div>
+                        <div class="scanning-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage & Trust Section -->
+    <section class="heritage-section">
+        <div class="container">
+            <div class="heritage-grid glass-panel">
+                <div class="heritage-visual">
+                    <div class="year-badge glow-text">EST. 1998</div>
+                    <div class="trust-rings">
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                    </div>
+                </div>
+                <div class="heritage-content">
+                    <h2>Decades of <span class="gold-text">Trust & Excellence</span></h2>
+                    <p>Thangakaasu isn't just a digital platform; we are built on over two decades of traditional,
+                        brick-and-mortar bullion trading expertise. Our transition to a digital exchange brings Wall
+                        Street-level appraisal technology directly to the consumer, backed by generation-spanning
+                        industry relationships.</p>
+                    <div class="trust-metrics">
+                        <div class="metric">
+                            <span class="metric-value">25+</span>
+                            <span class="metric-label">Years in Business</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">₹500Cr+</span>
+                            <span class="metric-label">Assets Liquidated</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">100k+</span>
+                            <span class="metric-label">Clients Served</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>The <span class="gold-text">Thangakaasu</span> Advantage</h2>
+                <p>Why thousands trust us with their high-value assets.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon">💎</div>
+                    <h3>Top Tier Payouts</h3>
+                    <p>We bypass the middlemen, offering up to 20% more than local buyers or pawn shops.</p>
+                </div>
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon">⚡</div>
+                    <h3>24Hr Funding</h3>
+                    <p>Once you accept our offer, funds are wired immediately to your account.</p>
+                </div>
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Transparent Appraisal</h3>
+                    <p>X-Ray fluorescence spectroscopy ensures 100% accurate, non-destructive testing.</p>
+                </div>
+                <div class="feature-card glass-panel">
+                    <div class="feature-icon">🚫</div>
+                    <h3>No Hidden Fees</h3>
+                    <p>Zero appraisal fees, zero shipping costs, and zero obligation to sell.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Trends -->
+    <section class="trends-section">
+        <div class="container">
+            <div class="trends-container glass-panel">
+                <div class="trends-content">
+                    <h2>Gold is at a <span class="gold-text">Historic High</span></h2>
+                    <p>Don't wait for a market correction. The value of your unworn jewelry and assets has never been
+                        higher.</p>
+                    <div class="market-stats">
+                        <div class="stat">
+                            <span class="stat-value text-green">+14.2%</span>
+                            <span class="stat-label">Year over Year</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value text-green">Record</span>
+                            <span class="stat-label">All-Time Highs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="trends-chart">
+                    <!-- CSS mocked chart lines -->
+                    <div class="chart-line" style="height: 40%"></div>
+                    <div class="chart-line" style="height: 55%"></div>
+                    <div class="chart-line" style="height: 45%"></div>
+                    <div class="chart-line" style="height: 70%"></div>
+                    <div class="chart-line" style="height: 65%"></div>
+                    <div class="chart-line" style="height: 85%"></div>
+                    <div class="chart-line glow" style="height: 100%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client <span class="gold-text">Voices</span></h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card glass-panel">
+                    <div class="stars">★★★★★</div>
+                    <p class="review">"I was skeptical about sending my grandmother's jewelry in the mail, but the HD
+                        unboxing video gave me total peace of mind. Payout was 30% higher than my local jeweler."</p>
+                    <div class="author-profile">
+                        <img src="assets/profile1.jpg" alt="Sarah M." class="profile-img"
+                            onerror="this.src='https://via.placeholder.com/50/222/FFD700?text=SM'">
+                        <div class="author-info">
+                            <span class="author-name">Sarah M.</span>
+                            <span class="author-tag">Verified Client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-panel">
+                    <div class="stars">★★★★★</div>
+                    <p class="review">"Incredible interface. The valuation calculator was within ₹3,500 of the final
+                        offer.
+                        Fast, professional, and felt like dealing with a luxury private bank."</p>
+                    <div class="author-profile">
+                        <img src="assets/profile2.jpg" alt="David K." class="profile-img"
+                            onerror="this.src='https://via.placeholder.com/50/222/FFD700?text=DK'">
+                        <div class="author-info">
+                            <span class="author-name">David K.</span>
+                            <span class="author-tag">Verified Client</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card glass-panel">
+                    <div class="stars">★★★★★</div>
+                    <p class="review">"The entire process took less than 3 days from requesting the kit to the money
+                        hitting my account. Highly recommended."</p>
+                    <div class="author-profile">
+                        <img src="assets/profile3.jpg" alt="Elena R." class="profile-img"
+                            onerror="this.src='https://via.placeholder.com/50/222/FFD700?text=ER'">
+                        <div class="author-info">
+                            <span class="author-name">Elena R.</span>
+                            <span class="author-tag">Verified Client</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked <span class="gold-text">Questions</span></h2>
+            </div>
+            <div class="faq-accordion">
+                <div class="faq-item glass-panel">
+                    <div class="faq-question">
+                        <h3>How is my gold tested?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We use state-of-the-art X-Ray Fluorescence (XRF) spectroscopy. This method is completely
+                            non-destructive and provides the exact elemental composition of your items down to the
+                            decimal.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-panel">
+                    <div class="faq-question">
+                        <h3>What if I decline the offer?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No problem at all. If you decide not to sell, we will securely package your items and ship
+                            them back to you the next business day, fully insured and completely free of charge.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-panel">
+                    <div class="faq-question">
+                        <h3>Do you buy broken jewelry?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. The condition of the jewelry does not matter. We base our valuation purely on the
+                            precious metal content (karat and weight), not aesthetics or retail condition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-cta text-center">
+                <h2>Ready to unlock your asset's value?</h2>
+                <button class="cta-button primary glow" style="font-size: 1.2rem; padding: 20px 40px; margin-top: 2rem;"
+                    data-modal-target="#lead-modal">Request Free Apprasial Kit</button>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
+                        <img src="assets/logo.png" alt="Thangakaasu Logo"
+                            style="height: 40px; width: 40px; border-radius: 4px; object-fit: cover;">
+                        <span class="logo-text" style="font-size: 1.5rem;">தங்க<span
+                                class="gold-text">காசு</span></span>
+                    </div>
+                    <p>தங்கத்திற்கு காசு - The premium destination for liquidating precious metal assets.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <a href="#how-it-works">Process</a>
+                    <a href="#calculator">Calculator</a>
+                    <a href="#security">Security</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Insurance Details</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Thangakaasu Asset Exchange. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="lead-modal">
+        <div class="modal-content glass-panel">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h3>Request <span class="gold-text">Free Quote</span></h3>
+                <p>Lock in today's high rates with no obligation.</p>
+            </div>
+            <form id="lead-form">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" class="cyber-input" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="cyber-input" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" class="cyber-input" required>
+                </div>
+                <button type="submit" class="cta-button primary full-width" style="margin-top: 1rem;">Secure My
+                    Rate</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-wrapper">
+        <div class="chat-window glass-panel" id="chatbot-window">
+            <div class="chat-header">
+                <div>
+                    <h4>Thangakaasu Giene</h4>
+                    <span class="status-dot"></span> Online
+                </div>
+                <button class="chat-close" id="chat-close" style="z-index:1001; position:relative;">&times;</button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    <p>Hello! I am the Thangakaasu Giene. How can I assist you with your gold valuation today?</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chat-text" placeholder="Type your question..." class="cyber-input"
+                    style="padding: 8px;">
+                <button class="cta-button primary" id="chat-send" style="padding: 8px 15px;">Send</button>
+            </div>
+        </div>
+        <button class="chat-toggle primary glow" id="chat-toggle"
+            style="padding: 0; overflow: hidden; border: 2px solid var(--gold-primary);">
+            <img src="assets/giene.png" alt="Thangakaasu Giene" style="width: 100%; height: 100%; object-fit: cover;">
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
