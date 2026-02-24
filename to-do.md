@@ -1,33 +1,24 @@
-# Cash for Gold - Modern Futuristic Website Development Plan
+# To-Do List for Thangakaasu Website Improvements
 
-## 🏗️ Phase 1: Foundation & Architecture
-- [ ] Set up file structure (HTML, CSS, JS, assets directories).
-- [ ] Establish futuristic typography (e.g., Space Grotesk, Orbitron, or clean Sans-Serif like Inter).
-- [ ] Configure baseline CSS variables for themes (Deep Space Black backgrounds, Neon Gold accents).
+- [x] **Typography Update**
+  - [x] Replace `Orbitron` font with `Playfair Display` for headings.
+  - [x] Keep `Inter` for body text.
 
-## 🎨 Phase 2: Futuristic Design System
-- [ ] Define Color Palette: Deep blacks (`#050505`), sleek dark grays, and striking gold (`#FFD700` variants) with glowing effects.
-- [ ] Implement UI Elements: Glassmorphism panels, glowing borders, smooth hover animations (Awwwards style).
-- [ ] Create layout grid emphasizing whitespace, large typography, and immersive visuals.
+- [x] **Content & Copywriting Updates**
+  - [x] Tone down Cyberpunk/Tech language (e.g., replace "Cyberpunk Cash for Gold", "Liquid Capital", "Next-Gen Asset Exchange").
+  - [x] Update SEO meta title and descriptions to be more trust-focused.
 
-## 🧭 Phase 3: Core UI & Navigation
-- [ ] Build responsive, sticky navigation bar with a futuristic logo.
-- [ ] Implement off-canvas or full-screen menu for mobile.
-- [ ] Add subtle enter-animations for page load (like a digital "boot-up" sequence).
+- [ ] **UI & Animation Adjustments**
+  - [ ] Remove glitch effects (`.glitch-text`) and scanning animations (`.scanning-line`, `.scanning-circle`).
+  - [ ] Implement a sticky mobile "Get Quote" button.
 
-## ✨ Phase 4: Dynamic Features & Interactive Sections
-- [ ] **Hero Section**: High-impact scroll-triggered visual or interactive 3D gold elements.
-- [ ] **Interactive Valuation Tool**: A sleek, futuristic calculator where users enter gold weight/karat to see a real-time, animated price estimate.
-- [ ] **"How it Works" Flow**: Step-by-step animated guide (Request Kit -> Send Gold -> Get Paid).
-- [ ] **Trust & Security Panel**: Glowing badges and high-tech security visual cues to build trust.
-- [ ] **Real-time Price Ticker**: A digital ticker showing live or simulated gold market prices.
+- [ ] **Trust & Credibility Features**
+  - [ ] Add Trust Badges under CTAs (e.g., "Insured by [Provider]", "Secure Shipping").
+  - [ ] Add Competitor Price Comparison in the Valuation/Features section.
+  - [ ] Add physical office address in the footer.
 
-## 🖼️ Phase 5: Asset Generation & Integration
-- [ ] Generate modern/futuristic gold, jewelry, and high-tech UI assets using **Nano Banana** image generation.
-- [ ] Edit and optimize generated images.
-- [ ] Integrate images into the canvas/hero and feature sections.
-
-## 🛠️ Phase 6: Polish & Launch
-- [ ] Refine all transition and scroll animations (using GSAP or Vanilla CSS/JS observer).
-- [ ] Ensure perfect responsive behavior across devices.
-- [ ] Final performance optimizations and contrast checks.
+- [x] **New Features**
+  - [x] Add a WhatsApp / Direct Human Contact floating button.
+  - [x] Add a "Track My Asset" link/portal placeholder in the navigation.
+  - [x] Add a Language Toggle (English / தமிழ்) placeholder in the navigation.
+  - [x] Add a "What We Buy" visual section.

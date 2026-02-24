@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(() => {
             if (Math.random() > 0.9) {
                 glitchText.style.textShadow = `
-                    ${Math.random() * 10 - 5}px ${Math.random() * 10 - 5}px 0 rgba(255,0,0,0.8),
-                    ${Math.random() * -10 + 5}px ${Math.random() * -10 + 5}px 0 rgba(0,255,255,0.8)
+                    ${Math.random() * 8 - 4}px ${Math.random() * 8 - 4}px 0 rgba(197, 160, 33, 0.4),
+                    ${Math.random() * -8 + 4}px ${Math.random() * -8 + 4}px 0 rgba(100, 100, 100, 0.3)
                 `;
                 setTimeout(() => {
                     glitchText.style.textShadow = 'none';

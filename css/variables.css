@@ -1,25 +1,25 @@
 :root {
-    --bg-dark: #050505;
-    --bg-darker: #020202;
-    --bg-panel: rgba(15, 15, 20, 0.7);
-    
-    --gold-primary: #FFD700;
-    --gold-bright: #FFE55C;
-    --gold-dark: #B8860B;
-    --gold-neon: #FFEA00;
-    
-    --text-main: #E0E0E0;
-    --text-muted: #888888;
-    
-    --border-glass: rgba(255, 215, 0, 0.15);
-    --border-glow: rgba(255, 215, 0, 0.4);
-    
-    --font-heading: 'Orbitron', sans-serif;
+    --bg-dark: #FFFFFF;
+    --bg-darker: #F4F4F4;
+    --bg-panel: rgba(255, 255, 255, 0.85);
+
+    --gold-primary: #C5A021;
+    --gold-bright: #D4AF37;
+    --gold-dark: #8E6F14;
+    --gold-neon: #FFD700;
+
+    --text-main: #1A1A1A;
+    --text-muted: #555555;
+
+    --border-glass: rgba(197, 160, 33, 0.15);
+    --border-glow: rgba(197, 160, 33, 0.3);
+
+    --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
-    
-    --glow-shadow: 0 0 15px rgba(255, 215, 0, 0.3), 0 0 30px rgba(255, 215, 0, 0.1);
-    --glow-shadow-intense: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.3);
-    
+
+    --glow-shadow: 0 10px 40px rgba(197, 160, 33, 0.08), 0 0 20px rgba(197, 160, 33, 0.05);
+    --glow-shadow-intense: 0 15px 50px rgba(197, 160, 33, 0.15), 0 0 30px rgba(197, 160, 33, 0.1);
+
     --transition-fast: 0.2s ease;
     --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
