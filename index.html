@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thangakaasu | Premium Cash for Gold</title>
+    <title>MK Gold | Premium Cash for Gold</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,15 +23,23 @@
 
     <!-- Navigation -->
     <nav class="navbar">
+        <!-- Daily Marquee Rate Strip -->
+        <div class="rate-marquee"
+            style="background: var(--gold-primary); color: #000; padding: 8px 0; font-weight: bold; font-size: 0.9rem; text-align: center; width: 100%; display: flex; justify-content: center; gap: 2rem; border-bottom: 1px solid rgba(0,0,0,0.1);">
+            <span>📈 Today's Selling Rate</span>
+            <span>24K (99.9%): ₹7,500/g</span>
+            <span>22K (91.6%): ₹6,875/g</span>
+            <span>18K (75.0%): ₹5,625/g</span>
+        </div>
         <div class="nav-container">
             <a href="#" class="logo" style="display: flex; align-items: center; gap: 10px; text-align: left;">
-                <img src="assets/logo.png" alt="Thangakaasu Logo"
+                <img src="assets/logo.png" alt="MK Gold Logo"
                     style="height: 40px; width: 40px; border-radius: 4px; object-fit: cover;">
                 <div>
-                    <span class="logo-text">Thanga<span class="gold-text">kaasu</span></span><br>
+                    <span class="logo-text">MK<span class="gold-text"> Gold</span></span><br>
                     <span
-                        style="font-size: 0.5rem; letter-spacing: 2px; color: var(--gold-primary); display: block; margin-top: -5px;">Thangathirku
-                        Kaasu</span>
+                        style="font-size: 0.5rem; letter-spacing: 2px; color: var(--gold-primary); display: block; margin-top: -5px; text-transform: uppercase;">Cash
+                        for Gold</span>
                 </div>
             </a>
             <div class="nav-links">
@@ -39,9 +47,11 @@
                 <a href="#calculator" class="nav-link">Valuation</a>
                 <a href="#security" class="nav-link">Security</a>
                 <a href="#track" class="nav-link" style="color: var(--gold-primary); font-weight: bold;">Track Asset</a>
-                <a href="#" class="nav-link"
+                <a href="tel:+918147994272" class="nav-link" style="font-weight: bold; color: var(--gold-primary);">📞
+                    +91 81479 94272</a>
+                <a href="#" class="nav-link" id="lang-toggle"
                     style="border: 1px solid var(--border-glass); padding: 4px 8px; border-radius: 4px;">EN / <span
-                        style="font-family: 'Inter', sans-serif;">தமிழ்</span></a>
+                        style="font-family: 'Inter', sans-serif;">ಕನ್ನಡ</span></a>
             </div>
             <button class="cta-button primary" data-modal-target="#lead-modal">Get Quote</button>
             <div class="hamburger">
@@ -64,15 +74,17 @@
                 <button class="cta-button secondary" href="#how-it-works">How It Works</button>
             </div>
             <div class="trust-badges"
-                style="margin-top: 1.5rem; display: flex; gap: 1rem; opacity: 0.8; font-size: 0.85rem; align-items: center;">
-                <span>🔒 Bank-Grade Security</span>
+                style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; opacity: 0.8; font-size: 0.85rem; align-items: center;">
+                <span>🏛️ Govt. Approved Valuers</span>
+                <span>🏅 ISO Certified</span>
                 <span>🛡️ 100% Insured</span>
                 <span>⭐ 4.9/5 Rating</span>
             </div>
         </div>
         <div class="hero-visual">
             <div class="hero-image-container">
-                <img src="assets/hero-gold.png" alt="Futuristic Gold" class="floating-gold" id="hero-img">
+                <canvas id="hero-sequence" class="floating-gold" width="2048" height="2048"
+                    style="width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease;"></canvas>
             </div>
         </div>
     </section>
@@ -119,31 +131,31 @@
                     <div class="result-label">Estimated Value</div>
                     <div class="result-value" id="estimated-value">$0.00</div>
                     <div class="market-rate-note">Based on live base rate: <span
-                            class="live-rate glow-text animate-pulse">16,246.00/g</span> <br><small
+                            class="live-rate glow-text animate-pulse">7,500.00/g</span> <br><small
                             style="color:var(--gold-primary); opacity: 0.8;">(Live MCX Pricing)</small></div>
                     <div class="competitor-comparison"
                         style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px dashed var(--border-glass); font-size: 0.9rem; color: var(--text-muted); text-align: left;">
                         <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                             <span>Local Jeweler:</span>
-                            <span style="color: #ff4444;">₹14,500/g</span>
+                            <span style="color: #ff4444;">₹6,800/g</span>
                         </div>
                         <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                             <span>Pawn Shop:</span>
-                            <span style="color: #ff4444;">₹13,000/g</span>
+                            <span style="color: #ff4444;">₹6,500/g</span>
                         </div>
                         <div
                             style="display: flex; justify-content: space-between; font-weight: bold; color: var(--gold-primary); font-size: 1rem;">
-                            <span>Thangakaasu:</span>
-                            <span class="live-rate">₹16,246/g</span>
+                            <span>MK Gold:</span>
+                            <span class="live-rate">₹7,500/g</span>
                         </div>
                     </div>
                 </div>
 
                 <button class="cta-button full-width primary" data-modal-target="#lead-modal">Lock In Price</button>
                 <div class="trust-badges"
-                    style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 1.5rem; opacity: 0.8; font-size: 0.85rem;">
-                    <span>📦 Free Secure Shipping</span>
-                    <span>⚡ 24hr Payout</span>
+                    style="margin-top: 1.5rem; display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; opacity: 0.8; font-size: 0.85rem;">
+                    <span>🛡️ Non-Destructive Testing</span>
+                    <span>⚡ Immediate Cash/IMPS</span>
                 </div>
             </div>
         </div>
@@ -157,20 +169,73 @@
                 <p>Simple, secure, and fully insured from start to finish.</p>
             </div>
             <div class="process-steps">
-                <div class="step glass-panel">
-                    <div class="step-num">01</div>
-                    <h3>Request Free Kit</h3>
-                    <p>Order a complimentary, fully insured shipping kit delivered straight to your door.</p>
+                <div class="step glass-panel"
+                    style="padding: 0; overflow: hidden; display: flex; flex-direction: column; text-align: left; background: var(--bg-dark);">
+                    <!-- Top Image Half -->
+                    <div style="position: relative; width: 100%; height: 260px;">
+                        <img src="assets/process section/shop visit.png" alt="Shop Visit"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: 20% center;">
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; background: linear-gradient(to top, var(--bg-dark) 0%, transparent 100%);">
+                        </div>
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 0 2.5rem 0.5rem 2.5rem;">
+                            <div class="step-num"
+                                style="text-align: left; margin-bottom: 0; font-size: 2.5rem; line-height: 1;">01</div>
+                            <h3 style="text-align: left; margin-bottom: 0;">Visit Our Shop</h3>
+                        </div>
+                    </div>
+                    <!-- Bottom Text Half -->
+                    <div style="padding: 1rem 2.5rem 2.5rem 2.5rem; flex-grow: 1; background: var(--bg-dark);">
+                        <p style="text-align: left; margin-bottom: 0;">Bring your gold to our trusted MK GOLD branch for
+                            an immediate evaluation.</p>
+                    </div>
                 </div>
-                <div class="step glass-panel">
-                    <div class="step-num">02</div>
-                    <h3>Send Assets</h3>
-                    <p>Securely pack your gold. Shipping is prepaid, tracked, and insured for your peace of mind.</p>
+
+                <div class="step glass-panel"
+                    style="padding: 0; overflow: hidden; display: flex; flex-direction: column; text-align: left; background: var(--bg-dark);">
+                    <!-- Top Image Half -->
+                    <div style="position: relative; width: 100%; height: 260px;">
+                        <img src="assets/process section/purity checking.png" alt="Purity Checking"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; background: linear-gradient(to top, var(--bg-dark) 0%, transparent 100%);">
+                        </div>
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 0 2.5rem 0.5rem 2.5rem;">
+                            <div class="step-num"
+                                style="text-align: left; margin-bottom: 0; font-size: 2.5rem; line-height: 1;">02</div>
+                            <h3 style="text-align: left; margin-bottom: 0;">Transparent Appraisal</h3>
+                        </div>
+                    </div>
+                    <!-- Bottom Text Half -->
+                    <div style="padding: 1rem 2.5rem 2.5rem 2.5rem; flex-grow: 1; background: var(--bg-dark);">
+                        <p style="text-align: left; margin-bottom: 0;">We test your gold right in front of you using
+                            advanced technology.</p>
+                    </div>
                 </div>
-                <div class="step glass-panel">
-                    <div class="step-num">03</div>
-                    <h3>Get Paid Instantly</h3>
-                    <p>Receive your valuation within 24 hours. Accept the offer for immediate transfer.</p>
+
+                <div class="step glass-panel"
+                    style="padding: 0; overflow: hidden; display: flex; flex-direction: column; text-align: left; background: var(--bg-dark);">
+                    <!-- Top Image Half -->
+                    <div style="position: relative; width: 100%; height: 260px;">
+                        <img src="assets/process section/getting money.png" alt="Getting Money"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; background: linear-gradient(to top, var(--bg-dark) 0%, transparent 100%);">
+                        </div>
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 0 2.5rem 0.5rem 2.5rem;">
+                            <div class="step-num"
+                                style="text-align: left; margin-bottom: 0; font-size: 2.5rem; line-height: 1;">03</div>
+                            <h3 style="text-align: left; margin-bottom: 0;">Get Paid Instantly</h3>
+                        </div>
+                    </div>
+                    <!-- Bottom Text Half -->
+                    <div style="padding: 1rem 2.5rem 2.5rem 2.5rem; flex-grow: 1; background: var(--bg-dark);">
+                        <p style="text-align: left; margin-bottom: 0;">Receive your money immediately on the spot, with
+                            absolutely no delays.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -178,7 +243,7 @@
 
     <!-- What We Buy Section -->
     <section class="what-we-buy-section" id="what-we-buy"
-        style="padding: 6rem 0; background: linear-gradient(0deg, var(--bg-darker) 0%, var(--bg-dark) 100%);">
+        style="padding: 4rem 0; background: linear-gradient(0deg, var(--bg-darker) 0%, var(--bg-dark) 100%);">
         <div class="container">
             <div class="section-header">
                 <h2>What We <span class="gold-text">Buy</span></h2>
@@ -218,14 +283,14 @@
         <div class="container">
             <div class="security-grid">
                 <div class="security-content">
-                    <h2>Bank-Grade <span class="gold-text">Security</span></h2>
-                    <p>Your assets are protected by enterprise-level security protocols at every step of the journey.
+                    <h2>Uncompromised <span class="gold-text">Trust</span></h2>
+                    <p>Your assets are evaluated securely and transparently in our monitored premises.
                     </p>
                     <ul class="security-list">
-                        <li><span>✓</span> 100% Insured Shipping up to $100,000</li>
-                        <li><span>✓</span> 24/7 Facility Vault Storage</li>
-                        <li><span>✓</span> HD Video Unboxing Process</li>
-                        <li><span>✓</span> A+ Better Business Bureau Rating</li>
+                        <li><span>✓</span> Secure Branch Locations</li>
+                        <li><span>✓</span> Transparent In-Person Testing</li>
+                        <li><span>✓</span> Instant Cash (up to ₹10k) or Immediate IMPS/RTGS</li>
+                        <li><span>✓</span> 100% Customer Satisfaction</li>
                     </ul>
                 </div>
                 <div class="security-visual">
@@ -251,10 +316,9 @@
                 </div>
                 <div class="heritage-content">
                     <h2>Decades of <span class="gold-text">Trust & Excellence</span></h2>
-                    <p>Thangakaasu isn't just a digital platform; we are built on over two decades of traditional,
-                        brick-and-mortar bullion trading expertise. Our transition to a digital exchange brings Wall
-                        Street-level appraisal technology directly to the consumer, backed by generation-spanning
-                        industry relationships.</p>
+                    <p>MK Gold is built on over two decades of traditional bullion trading expertise. We bring
+                        professional appraisal technology directly to our retail stores, ensuring you get the best value
+                        for your gold, backed by generation-spanning industry relationships.</p>
                     <div class="trust-metrics">
                         <div class="metric">
                             <span class="metric-value">25+</span>
@@ -278,29 +342,37 @@
     <section class="features-section" id="features">
         <div class="container">
             <div class="section-header">
-                <h2>The <span class="gold-text">Thangakaasu</span> Advantage</h2>
+                <h2>Why <span class="gold-text">MK Gold</span></h2>
                 <p>Why thousands trust us with their high-value assets.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card glass-panel">
                     <div class="feature-icon">💎</div>
-                    <h3>Top Tier Payouts</h3>
-                    <p>We bypass the middlemen, offering up to 20% more than local buyers or pawn shops.</p>
+                    <div>
+                        <h3>Top Tier Payouts</h3>
+                        <p>We bypass the middlemen, offering up to 20% more than local buyers or pawn shops.</p>
+                    </div>
                 </div>
                 <div class="feature-card glass-panel">
                     <div class="feature-icon">⚡</div>
-                    <h3>24Hr Funding</h3>
-                    <p>Once you accept our offer, funds are wired immediately to your account.</p>
+                    <div>
+                        <h3>Instant Funding</h3>
+                        <p>Walk out with cash or immediate bank transfer the moment you accept our offer.</p>
+                    </div>
                 </div>
                 <div class="feature-card glass-panel">
                     <div class="feature-icon">🔍</div>
-                    <h3>Transparent Appraisal</h3>
-                    <p>X-Ray fluorescence spectroscopy ensures 100% accurate, non-destructive testing.</p>
+                    <div>
+                        <h3>Transparent Appraisal</h3>
+                        <p>X-Ray fluorescence spectroscopy ensures 100% accurate, non-destructive testing.</p>
+                    </div>
                 </div>
                 <div class="feature-card glass-panel">
                     <div class="feature-icon">🚫</div>
-                    <h3>No Hidden Fees</h3>
-                    <p>Zero appraisal fees, zero shipping costs, and zero obligation to sell.</p>
+                    <div>
+                        <h3>No Hidden Fees</h3>
+                        <p>Zero appraisal fees, zero shipping costs, and zero obligation to sell.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -348,40 +420,37 @@
             <div class="testimonial-grid">
                 <div class="testimonial-card glass-panel">
                     <div class="stars">★★★★★</div>
-                    <p class="review">"I was skeptical about sending my grandmother's jewelry in the mail, but the HD
-                        unboxing video gave me total peace of mind. Payout was 30% higher than my local jeweler."</p>
+                    <p class="review">"I walked into the MK Gold branch and was amazed by the transparency. They tested
+                        the gold right in front of me and paid out instantly. Much better than local jewelers."</p>
                     <div class="author-profile">
-                        <img src="assets/profile1.jpg" alt="Sarah M." class="profile-img"
-                            onerror="this.src='https://via.placeholder.com/50/222/FFD700?text=SM'">
+                        <img src="assets/profile1.jpg" alt="Suresh K." class="profile-img">
                         <div class="author-info">
-                            <span class="author-name">Sarah M.</span>
+                            <span class="author-name">Suresh K.</span>
                             <span class="author-tag">Verified Client</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card glass-panel">
                     <div class="stars">★★★★★</div>
-                    <p class="review">"Incredible interface. The valuation calculator was within ₹3,500 of the final
-                        offer.
-                        Fast, professional, and felt like dealing with a luxury private bank."</p>
+                    <p class="review">"Incredible service. The online valuation calculator was accurate, and the
+                        in-store experience was fast and professional. Felt very secure. Got ₹5,000 more than my local
+                        jeweler."</p>
                     <div class="author-profile">
-                        <img src="assets/profile2.jpg" alt="David K." class="profile-img"
-                            onerror="this.src='https://via.placeholder.com/50/222/FFD700?text=DK'">
+                        <img src="assets/profile2.jpg" alt="Priya N." class="profile-img">
                         <div class="author-info">
-                            <span class="author-name">David K.</span>
+                            <span class="author-name">Priya N.</span>
                             <span class="author-tag">Verified Client</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card glass-panel">
                     <div class="stars">★★★★★</div>
-                    <p class="review">"The entire process took less than 3 days from requesting the kit to the money
-                        hitting my account. Highly recommended."</p>
+                    <p class="review">"The entire process took less than 15 minutes at the store. I handed over my old
+                        jewelry and walked out with cash immediately. Highly recommended."</p>
                     <div class="author-profile">
-                        <img src="assets/profile3.jpg" alt="Elena R." class="profile-img"
-                            onerror="this.src='https://via.placeholder.com/50/222/FFD700?text=ER'">
+                        <img src="assets/profile3.jpg" alt="Ramesh B." class="profile-img">
                         <div class="author-info">
-                            <span class="author-name">Elena R.</span>
+                            <span class="author-name">Ramesh B.</span>
                             <span class="author-tag">Verified Client</span>
                         </div>
                     </div>
@@ -403,9 +472,9 @@
                         <span class="toggle-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>We use state-of-the-art X-Ray Fluorescence (XRF) spectroscopy. This method is completely
-                            non-destructive and provides the exact elemental composition of your items down to the
-                            decimal.</p>
+                        <p>We use state-of-the-art German X-Ray Fluorescence (XRF) spectroscopy. Your gold is tested
+                            right in front of your eyes without melting or scratching it. This method provides the exact
+                            elemental composition of your items down to the decimal.</p>
                     </div>
                 </div>
                 <div class="faq-item glass-panel">
@@ -414,8 +483,8 @@
                         <span class="toggle-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>No problem at all. If you decide not to sell, we will securely package your items and ship
-                            them back to you the next business day, fully insured and completely free of charge.</p>
+                        <p>No problem at all. Our appraisals are obligation-free. If you decide not to sell, you can
+                            simply take your items back with you.</p>
                     </div>
                 </div>
                 <div class="faq-item glass-panel">
@@ -428,6 +497,34 @@
                             precious metal content (karat and weight), not aesthetics or retail condition.</p>
                     </div>
                 </div>
+                <div class="faq-item glass-panel">
+                    <div class="faq-question">
+                        <h3>Are there any hidden charges?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. We offer 100% Free Valuation with no obligations to sell. We do not charge any appraisal
+                            fees, testing fees, or have hidden deductions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="location" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h2>Our <span class="gold-text">Location</span></h2>
+                <p>Visit us at our headquarters for an instant, transparent appraisal.</p>
+            </div>
+            <div class="glass-panel" style="padding: 1rem; height: 600px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.6672323602447!2d77.6105741!3d12.9290918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150047fa5ea3%3A0xc3afbf4c68882fa!2s49%2C%201st%20Cross%20Rd%2C%20Phase%203%2C%20Jay%20Bheema%20Nagar%2C%201st%20Stage%2C%20BTM%201st%20Stage%2C%20Bengaluru%2C%20Karnataka%20560068!5e0!3m2!1sen!2sin!4v1709123456789!5m2!1sen!2sin"
+                    width="100%" height="100%"
+                    style="border:0; border-radius: 8px; filter: invert(90%) hue-rotate(180deg);" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </section>
@@ -438,27 +535,27 @@
             <div class="footer-cta text-center">
                 <h2>Ready to unlock your asset's value?</h2>
                 <button class="cta-button primary glow" style="font-size: 1.2rem; padding: 20px 40px; margin-top: 2rem;"
-                    data-modal-target="#lead-modal">Request Free Apprasial Kit</button>
+                    data-modal-target="#lead-modal">Request Appraisal</button>
             </div>
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
-                        <img src="assets/logo.png" alt="Thangakaasu Logo"
+                        <img src="assets/logo.png" alt="MK Gold Logo"
                             style="height: 40px; width: 40px; border-radius: 4px; object-fit: cover;">
-                        <span class="logo-text" style="font-size: 1.5rem;">Thanga<span
-                                class="gold-text">kaasu</span></span>
+                        <span class="logo-text" style="font-size: 1.5rem;">MK<span class="gold-text"> Gold</span></span>
                     </div>
-                    <p>Thangathirku Kaasu - The premium destination for liquidating precious metal assets.</p>
+                    <p>Cash for Gold - The premium destination for liquidating precious metal assets.</p>
                     <div class="office-address"
                         style="margin-top: 1.5rem; color: var(--text-muted); font-size: 0.9rem;">
                         <h4
                             style="color: var(--gold-primary); margin-bottom: 0.5rem; font-family: var(--font-body); letter-spacing: normal;">
-                            Corporate Office</h4>
-                        <p>123 Gold Bazaar Road, T. Nagar<br>Chennai, Tamil Nadu 600017<br>India</p>
+                            Headquarters</h4>
+                        <p>49, 1st Cross Rd, Phase 3,<br>Jay Bheema Nagar, 1st Stage,<br>BTM 1st Stage,
+                            Bengaluru,<br>Karnataka 560068, India</p>
                     </div>
                 </div>
                 <div class="footer-links">
-                    <h4>Platform</h4>
+                    <h4>Quick Links</h4>
                     <a href="#how-it-works">Process</a>
                     <a href="#calculator">Calculator</a>
                     <a href="#security">Security</a>
@@ -468,18 +565,90 @@
                     <a href="#">Terms of Service</a>
                     <a href="#">Privacy Policy</a>
                     <a href="#">Insurance Details</a>
+
+                    <h4 style="margin-top: 2.5rem;">Connect</h4>
+                    <div style="display: flex; gap: 15px; margin-top: 10px;">
+                        <a href="https://www.instagram.com/lovpic.s?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" rel="noopener noreferrer"
+                            style="color: var(--gold-primary); display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-glass); background: rgba(255, 215, 0, 0.05); transition: all 0.3s ease;"
+                            onmouseover="this.style.background='var(--gold-primary)'; this.style.color='#000'"
+                            onmouseout="this.style.background='rgba(255, 215, 0, 0.05)'; this.style.color='var(--gold-primary)'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/918147994272" target="_blank" rel="noopener noreferrer"
+                            style="color: var(--gold-primary); display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-glass); background: rgba(255, 215, 0, 0.05); transition: all 0.3s ease;"
+                            onmouseover="this.style.background='var(--gold-primary)'; this.style.color='#000'"
+                            onmouseout="this.style.background='rgba(255, 215, 0, 0.05)'; this.style.color='var(--gold-primary)'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@lovpics" target="_blank" rel="noopener noreferrer"
+                            style="color: var(--gold-primary); display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-glass); background: rgba(255, 215, 0, 0.05); transition: all 0.3s ease;"
+                            onmouseover="this.style.background='var(--gold-primary)'; this.style.color='#000'"
+                            onmouseout="this.style.background='rgba(255, 215, 0, 0.05)'; this.style.color='var(--gold-primary)'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                                </path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                        <a href="https://x.com/lov_pics" target="_blank" rel="noopener noreferrer"
+                            style="color: var(--gold-primary); display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-glass); background: rgba(255, 215, 0, 0.05); transition: all 0.3s ease;"
+                            onmouseover="this.style.background='var(--gold-primary)'; this.style.color='#000'"
+                            onmouseout="this.style.background='rgba(255, 215, 0, 0.05)'; this.style.color='var(--gold-primary)'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/lovpics/" target="_blank" rel="noopener noreferrer"
+                            style="color: var(--gold-primary); display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-glass); background: rgba(255, 215, 0, 0.05); transition: all 0.3s ease;"
+                            onmouseover="this.style.background='var(--gold-primary)'; this.style.color='#000'"
+                            onmouseout="this.style.background='rgba(255, 215, 0, 0.05)'; this.style.color='var(--gold-primary)'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; 2026 Thangakaasu Asset Exchange. All rights reserved.
+                &copy; 2026 MK Gold Exchange. All rights reserved.
             </div>
         </div>
     </footer>
 
-    <!-- Modal -->
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-sticky-cta">
+        <button class="cta-button primary full-width" style="box-shadow: var(--glow-shadow);"
+            data-modal-target="#lead-modal">Get Instant Quote</button>
+    </div>
+
+    <!-- Modals -->
     <div class="modal" id="lead-modal">
         <div class="modal-content glass-panel">
-            <span class="close-btn">&times;</span>
+            <span class="close-btn" onclick="this.closest('.modal').style.display='none'">&times;</span>
             <div class="modal-header">
                 <h3>Request <span class="gold-text">Free Quote</span></h3>
                 <p>Lock in today's high rates with no obligation.</p>
@@ -503,6 +672,34 @@
         </div>
     </div>
 
+    <!-- Value Comparison Auto-Popup -->
+    <div class="modal" id="value-popup-modal">
+        <div class="modal-content glass-panel"
+            style="border: 2px solid var(--gold-neon); box-shadow: var(--glow-shadow-intense); text-align: center; max-width: 500px;">
+            <span class="close-btn"
+                onclick="const m = this.closest('.modal'); m.classList.remove('show'); setTimeout(() => m.style.display='none', 300);">&times;</span>
+            <div style="font-size: 3rem; margin-bottom: 0.5rem; color: var(--gold-primary);">⚖️</div>
+            <h2
+                style="font-family: var(--font-heading); font-size: 2rem; font-weight: 900; margin-bottom: 0.5rem; text-transform: uppercase;">
+                Get the True <span style="color: var(--gold-primary);">Value</span>
+            </h2>
+            <h3
+                style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--text-main);">
+                FOR YOUR GOLD AT MK GOLD
+            </h3>
+            <p
+                style="font-size: 1rem; color: var(--text-main); line-height: 1.6; margin-bottom: 2rem; font-weight: 500;">
+                Compare with other vendors, we'll give you more than anybody. Skip the pawn shops and middle-men. Get
+                pure 100% market value for your gold today.
+            </p>
+            <button class="cta-button primary full-width glow"
+                onclick="const m2 = document.getElementById('value-popup-modal'); m2.classList.remove('show'); setTimeout(() => { m2.style.display='none'; const lm = document.getElementById('lead-modal'); lm.style.display='flex'; setTimeout(() => lm.classList.add('show'), 10); }, 300);"
+                style="font-size: 1.1rem; padding: 15px;">
+                Lock In The Best Rate Now
+            </button>
+        </div>
+    </div>
+
     <!-- Toast Container -->
     <div id="toast-container"></div>
 
@@ -511,14 +708,14 @@
         <div class="chat-window glass-panel" id="chatbot-window">
             <div class="chat-header">
                 <div>
-                    <h4>Thangakaasu Giene</h4>
+                    <h4>MK Gold Genie</h4>
                     <span class="status-dot"></span> Online
                 </div>
                 <button class="chat-close" id="chat-close" style="z-index:1001; position:relative;">&times;</button>
             </div>
             <div class="chat-messages" id="chat-messages">
                 <div class="message bot">
-                    <p>Hello! I am the Thangakaasu Giene. How can I assist you with your gold valuation today?</p>
+                    <p>Hello! I am the MK Gold Genie. How can I assist you with your gold valuation today?</p>
                 </div>
             </div>
             <div class="chat-input">
@@ -529,7 +726,7 @@
         </div>
         <button class="chat-toggle primary glow" id="chat-toggle"
             style="padding: 0; overflow: hidden; border: 2px solid var(--gold-primary);">
-            <img src="assets/giene.png" alt="Thangakaasu Giene" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="assets/giene.png" alt="MK Gold Genie" style="width: 100%; height: 100%; object-fit: cover;">
         </button>
     </div>
 
@@ -539,7 +736,7 @@
     </div>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/91987654321" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/918147994272" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
             style="width: 100%; height: 100%;">
     </a>
